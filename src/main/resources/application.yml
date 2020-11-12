@@ -1,0 +1,18 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /test-mybatis-plus
+
+# dataSource
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://www.yiyuntian.top:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: rootto..
+
+logging:
+  level:
+    com.yiyuntian.test.testmybatisplus.mapper: debug
+
+
