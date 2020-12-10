@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiyuntian.test.testmybatisplus.mapper.UserMapper">
+    <delete id="deleteByAge" parameterType="java.lang.Integer">
+        delete from user where age = #{age};
+    </delete>
+</mapper>

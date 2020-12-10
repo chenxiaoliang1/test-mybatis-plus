@@ -8,6 +8,7 @@ import com.yiyuntian.test.testmybatisplus.mapper.UserMapper;
 import com.yiyuntian.test.testmybatisplus.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -16,6 +17,7 @@ import java.util.List;
 
 @SpringBootTest
 @Slf4j
+@MapperScan("com.yiyuntian.test.testmybatisplus.mapper")
 class TestMybatisPlusApplicationTests {
 
     @Autowired
@@ -72,6 +74,11 @@ class TestMybatisPlusApplicationTests {
         } else {
             log.info("删除数据失败！");
         }
+    }
+
+    @Test
+    public void testDeleteByAge() {
+        userMapper.deleteByAge(21);
     }
 
     @Test

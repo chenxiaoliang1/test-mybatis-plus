@@ -2,7 +2,6 @@ package com.yiyuntian.test.testmybatisplus.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yiyuntian.test.testmybatisplus.entity.User;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -13,6 +12,6 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface UserMapper extends BaseMapper<User> {
 
-    int deleteById(@Param("id") Long id);
+    int deleteByAge(@Param("age") Integer age);
 
 }
