@@ -30,8 +30,7 @@ class TestMybatisPlusApplicationTests {
     void testSelect() {
         log.info("----- selectAll method test ------");
         List<User> userList = userMapper.selectList(null);
-        for (User user :
-                userList) {
+        for (User user : userList) {
             log.info(user.toString());
         }
     }
